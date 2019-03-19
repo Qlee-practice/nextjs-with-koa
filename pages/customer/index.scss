@@ -1,0 +1,14 @@
+.container ul {
+  height: 200px;
+  width: 100px;
+  border: solid 1px lightblue;
+}
+
+.container ul + ul {
+  margin-left: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
