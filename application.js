@@ -1,8 +1,9 @@
 const next = require('next');
 const Koa = require('koa');
+const process = require('process');
 const koaRouter = require('./routes-api');
 const nextConfig = require('./next.config');
-const app = next(nextConfig);
+const app = next({ ...nextConfig, dev: process.env.NODE_ENV === 'dev' });
 const pageRouter = require('./routes-page');
 const nextHandler = pageRouter.getRequestHandler(app);
 
